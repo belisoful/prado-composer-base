@@ -1,0 +1,1 @@
+my_error_condition = Prado Composer Base threw an exception
