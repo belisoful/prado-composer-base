@@ -27,26 +27,23 @@ to the require section of your `composer.json` file.
 Setup
 -----
 
-Once the extension is installed, load the module in your Prado application config
-with the TComposerManager Module.  All packages with an extra/bootstrap class are
-loaded regardless of being specified:
+Once the extension is installed, load the extension in your Prado application config by specifying the extension name as a module id.  
+
+Add the module to the application configuration without the class.  For example, like this:
 
 ```xml
-<module class="TComposerManager">
-</module>
-```
-
-To give the extension properties and module load order load the module like this:
-
-```xml
-<module class="TComposerManager">
-	<package id="belisoful/prado-composer-base" PropertyA='value1' />
+<modules>
+	<module id="belisoful/prado-composer-base" PropertyA='value1' />
 </module>
 ```
 
 
 Usage
 -----
+
+Add the following Application Parameter to your application configuration: PluginContentId
+
+Set PluginContentId to the name of the main TPlaceholderContent ID of your layout so the plugins can be loaded properly.
 
 Follow the panel link to http://application/web/index.php?page=Example
 On the index page you'll see extension specific content.
